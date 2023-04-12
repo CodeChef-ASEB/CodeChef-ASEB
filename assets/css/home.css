@@ -161,6 +161,12 @@ textarea {
   white-space: nowrap;
 }
 
+footer{
+  padding-top: 50px;
+  box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+
 .svg-inline--fa {
   vertical-align: -0.2em;
 }
