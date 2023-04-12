@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="my-heading" class="">Tech Triumph 1.0</h1> -->
+    <div class="logo">
+      <img src="assets/images/startup.png" alt="Your logo">
+    </div> 
+    <div><p id="my-paragraph" class="hidden">Codechef ASEB</p></div>
+    <script>
+      var box = document.querySelector('.logo');
+      var paragraph = document.getElementById('my-paragraph');
+      var heading = document.getElementById('my-heading');
+      box.addEventListener('animationend', function() {
+        paragraph.classList.remove('hidden');
+        setTimeout(() => {
+          setTimeout(function() {
+          document.body.classList.add('fade-out');
+          document.querySelector('p').classList.add('fade-out');
+          document.querySelector('div').classList.add('fade-out');
+          setTimeout(function() {
+            window.location.href = 'home.html';
+          }, 4000);
+        }, 3000);
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

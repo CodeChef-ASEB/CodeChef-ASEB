@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Page</title>
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <script
+      src="https://kit.fontawesome.com/549a6f0c8a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("fade-wrapper").style.opacity = 1;
+      };
+      if (performance.navigation.type == 1) {
+        window.location.href = "index.html";
+      }
+    </script>
+  </head>
+  <body id="fade-wrapper">
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">CodeChef ASEB</div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/" target="">Home</a>
+        <a href="about.html" target="">About</a>
+        <a href="events.html" target="">Events</a>
+      </div>
+    </div>
+    <div class="intro">
+      <img src="assets/images/intro.png" />
+      <div class="content">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nobis
+          deserunt dolore natus, expedita numquam vitae perferendis non optio
+          nemo fugit officiis quam, sunt harum dicta. Reprehenderit placeat
+          autem veniam. Impedit cumque, ullam quas eius mollitia ab eaque,
+          dolore exercitationem voluptate ea porro voluptatibus veniam quis esse
+          libero. Dicta, at ad suscipit voluptatibus vitae voluptatem quia
+          libero aliquam voluptatum rerum. Perferendis laborum provident, id
+          optio earum velit et officiis eligendi. Nulla sequi non natus placeat
+          iste, deserunt praesentium nesciunt obcaecati doloribus quidem animi
+          aperiam ullam hic molestiae debitis, dignissimos harum. Aspernatur non
+          distinctio quaerat veritatis. Error ex similique ipsam ab eum
+          voluptate, cum alias. Unde dolor eaque soluta beatae aut nisi minus
+          vitae illum similique, deleniti aperiam vero mollitia quo. Doloribus
+          vitae facilis quibusdam laudantium, ipsum unde praesentium a dolor
+          possimus nulla ullam cupiditate facere fugit itaque iste? Quo cum
+          animi fugiat. Quia modi, ad beatae tempora voluptates pariatur
+          deserunt?
+        </p>
+      </div>
+    </div>
+    <div class="pictures">Pictures</div>
+    <footer>
+      <div class="rounded-social-buttons">
+        <a
+          class="social-button gmail"
+          href="mailto:codechef.amritablr@gmail.com"
+          target="_blank"
+          ><i class="far fa-envelope"></i
+        ></a>
+        <a
+          class="social-button linkedin"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          class="social-button discord"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          ><i class="fab fa-discord"></i
+        ></a>
+
+        <a
+          class="social-button instagram"
+          href="https://www.instagram.com/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div>
+        <center>
+          <p class="copyright">
+            © Copyright 2022 CodeChef ASEB. All rights reserved.
+          </p>
+        </center>
+      </div>
+    </footer>
+  </body>
+</html>
