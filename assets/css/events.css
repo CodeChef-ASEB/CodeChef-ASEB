@@ -7,13 +7,17 @@ body {
   margin: 0px;
 }
 
+/* Navigation Bar */
+
 .nav {
   height: 60px;
   width: 100%;
   background-color: white;
   box-shadow: 0px 5px 10px 0px #aaa;
   position: fixed;
-  top:0;
+  top: 0;
+  pointer-events: auto;
+  z-index: 1000;
 }
 
 .nav > .nav-header {
@@ -102,229 +106,234 @@ body {
   }
 }
 
-p.copyright{
-  margin-top: 50px;
-  font-size: 22px;
-}
+/* Body */
 
 .event-container {
-    font-family: "Roboto", sans-serif;
-    max-width: 800px;
-    margin: 100px auto;
-  }
-  
-  .event-container h3.year {
-    font-size: 40px;
-    text-align: center;
-    border-bottom: 1px solid #b1b1b1;
-  }
-  
-  .event-container .event {
-    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
-    display: flex;
-    border-radius: 8px;
-    margin: 32px 0;
-  }
-  
-.event:hover{
+  font-family: "Roboto", sans-serif;
+  max-width: 800px;
+  margin: 100px auto;
+}
+
+.event-container h3.year {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.event-container .event {
+  box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  border-radius: 8px;
+  margin: 32px 0;
+  pointer-events: all;
+  z-index: 1;
+}
+
+.event-container .event .fixed {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  pointer-events: none; /* Make container unresponsive */
+}
+
+.event:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.event > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* height: 100%; */
+.event .event-left {
+  background: #222;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  padding: 8px 48px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px 0 0 8px;
 }
 
-  .event .event-left {
-    background: #222;
-    min-width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #eee;
-    padding: 8px 48px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 8px 0 0 8px;
-  }
-  
-  .event .event-left .date {
-    font-size: 40px;
-  }
-  
-  .event .event-left .month {
-    font-size: 16px;
-    font-weight: normal;
-  }
-  
-  .event .event-right {
-    display: flex;
+.event .event-left .date {
+  font-size: 40px;
+}
+
+.event .event-left .month {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.event .event-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.event .event-right h3.event-title {
+  font-size: 24px;
+  margin: 24px 0 10px 0;
+  color: #218bbb;
+  text-transform: uppercase;
+}
+
+.event .event-right .event-timing {
+  background: #fff8ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 8px;
+  border-radius: 16px;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+#tt-time {
+  width: 200px;
+}
+
+#tt-time img {
+  height: 20px;
+  padding-right: 15px;
+}
+
+.event .event-right .event-timing img {
+  height: 20px;
+  padding-right: 8px;
+}
+
+@media (max-width: 550px) {
+  .event {
     flex-direction: column;
-    justify-content: center;
-    padding: 0 24px;
-  }
-  
-  .event .event-right h3.event-title {
-    font-size: 24px;
-    margin: 24px 0 10px 0;
-    color: #218bbb;
-    text-transform: uppercase;
-  }
-  
-  .event .event-right .event-timing {
-    background: #fff8ba;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    padding: 8px;
-    border-radius: 16px;
-    margin: 24px 0;
-    font-size: 14px;
-  }
-  #tt-time {
-    width: 200px;
   }
 
-  #tt-time img{
-    height: 20px;
-    padding-right: 15px;
+  .event .event-left {
+    padding: 0;
+    border-radius: 8px 8px 0 0;
   }
 
-  .event .event-right .event-timing img {
-    height: 20px;
-    padding-right: 8px;
-  }
-  
-  @media (max-width: 550px) {
-    .event {
-      flex-direction: column;
-    }
-  
-    .event .event-left {
-      padding: 0;
-      border-radius: 8px 8px 0 0;
-    }
-  
-    .event .event-left .event-date .date,
-    .event .event-left .event-date .month {
-      display: inline-block;
-      font-size: 24px;
-    }
-  
-    .event .event-left .event-date {
-      padding: 10px 0;
-    }
-  }
-  
-  footer{
-    padding-top: 50px;
-    box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.4);
-  }
-
-
-  textarea {
-    resize: none;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
-  
-  .svg-inline--fa {
-    vertical-align: -0.2em;
-  }
-  
-  .rounded-social-buttons {
-    text-align: center;
-  }
-  
-  .rounded-social-buttons .social-button {
+  .event .event-left .event-date .date,
+  .event .event-left .event-date .month {
     display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    border: 5px solid transparent;
-    text-decoration: none;
-    text-align: center;
-    color: #fefefe;
-    font-size: 42px;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
-    margin-right: 4rem;
-    margin-left: 4rem;
-    margin-bottom: 0.15rem;
+    font-size: 24px;
   }
-  
-  .rounded-social-buttons .social-button:hover,
-  .rounded-social-buttons .social-button:focus {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+
+  .event .event-left .event-date {
+    padding: 10px 0;
   }
-  
-  .rounded-social-buttons
-  .fa-envelope,
-  .fa-linkedin,
-  .fa-discord,
-  .fa-instagram {
-    font-size: 50px;
-  }
-  
-  .rounded-social-buttons .social-button.gmail {
-    background: #EA4335;
-  }
-  
-  .rounded-social-buttons .social-button.gmail:hover,
-  .rounded-social-buttons .social-button.gmail:focus {
-    color: #EA4335;
-    background: #fefefe;
-    border-color: #EA4335;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin {
-    background: #007bb5;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin:hover,
-  .rounded-social-buttons .social-button.linkedin:focus {
-    color: #007bb5;
-    background: #fefefe;
-    border-color: #007bb5;
-  }
-  
-  .rounded-social-buttons .social-button.discord {
-    background: #5865F2;
-  }
-  
-  .rounded-social-buttons .social-button.discord:hover,
-  .rounded-social-buttons .social-button.discord:focus {
-    color: #5865F2;
-    background: #fefefe;
-    border-color: #5865F2;
-  }
-  
-  .rounded-social-buttons .social-button.instagram {
-    background: #d62976;
-  }
-  
-  .rounded-social-buttons .social-button.instagram:hover,
-  .rounded-social-buttons .social-button.instagram:focus {
-    color: #d62976;
-    background: #fefefe;
-    border-color: #d62976;
-  }
+}
+
+/* Footer */
+
+footer {
+  padding-top: 50px;
+  box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+  resize: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.svg-inline--fa {
+  vertical-align: -0.2em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border: 5px solid transparent;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 0.15rem;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-envelope,
+.fa-linkedin,
+.fa-discord,
+.fa-instagram {
+  font-size: 50px;
+}
+
+.rounded-social-buttons .social-button.gmail {
+  background: #ea4335;
+}
+
+.rounded-social-buttons .social-button.gmail:hover,
+.rounded-social-buttons .social-button.gmail:focus {
+  color: #ea4335;
+  background: #fefefe;
+  border-color: #ea4335;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.discord {
+  background: #5865f2;
+}
+
+.rounded-social-buttons .social-button.discord:hover,
+.rounded-social-buttons .social-button.discord:focus {
+  color: #5865f2;
+  background: #fefefe;
+  border-color: #5865f2;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #d62976;
+}
+
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+  color: #d62976;
+  background: #fefefe;
+  border-color: #d62976;
+}
+
+p.copyright {
+  margin-top: 50px;
+  font-size: 22px;
+}

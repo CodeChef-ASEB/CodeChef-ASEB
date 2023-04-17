@@ -7,13 +7,15 @@ body {
   margin: 0px;
 }
 
+/* Navigation Bar */
+
 .nav {
   height: 60px;
   width: 100%;
   background-color: white;
   box-shadow: 0px 5px 10px 0px #aaa;
   position: fixed;
-  top:0;
+  top: 0;
 }
 
 .nav > .nav-header {
@@ -55,6 +57,74 @@ body {
   display: none;
 }
 
+body.dark {
+  background-color: #292c35;
+}
+
+body.dark h1,
+body.dark .support a {
+  color: #fff;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.support {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.support a {
+  color: #292c35;
+  font-size: 32px;
+  backface-visibility: hidden;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.support a:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
@@ -68,21 +138,18 @@ body {
     height: 50px;
     padding: 13px;
   }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+
   .nav > .nav-btn > label > span {
     display: block;
     width: 25px;
     height: 10px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid;
   }
   .nav > .nav-links {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: white;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -107,43 +174,40 @@ body {
   transition: opacity 4s ease-out;
 }
 
-div.intro{
-	display: grid;
-	margin: 70px 100px;
-	grid-template-columns: 40fr 60fr;
+/* Body */
+
+div.intro {
+  display: grid;
+  margin: 70px 100px;
+  grid-template-columns: 40fr 60fr;
 }
 
-div.content p{
-	color: #0C4271;
-	font-size: 20px;
-	font-weight: 700;
+div.content p {
+  color: #0c4271;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-div.content span{
-	color: rgb(160, 160, 160);
-	font-size: 25px;
-	font-weight: 550;
-	display: block;
-	margin-top: 10px;
+div.content span {
+  color: rgb(160, 160, 160);
+  font-size: 25px;
+  font-weight: 550;
+  display: block;
+  margin-top: 10px;
 }
 
 div.intro img {
-    margin-top: 70px;
-	height: 300px;
-    width: 300px;
+  margin-top: 70px;
+  height: 300px;
+  width: 300px;
 }
 
-div.pictures{
-    display: flex;
+div.pictures {
+  display: flex;
   align-items: center;
   justify-content: center;
-    font-size: 100px;
-	height: 100vh;
-}
-
-p.copyright{
-    margin-top: 50px;
-    font-size: 22px;
+  font-size: 100px;
+  height: 100vh;
 }
 
 textarea {
@@ -161,11 +225,12 @@ textarea {
   white-space: nowrap;
 }
 
-footer{
+/* footer */
+
+footer {
   padding-top: 50px;
   box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.4);
 }
-
 
 .svg-inline--fa {
   vertical-align: -0.2em;
@@ -202,8 +267,7 @@ footer{
   transform: rotate(360deg);
 }
 
-.rounded-social-buttons
-.fa-envelope,
+.rounded-social-buttons .fa-envelope,
 .fa-linkedin,
 .fa-discord,
 .fa-instagram {
@@ -211,14 +275,14 @@ footer{
 }
 
 .rounded-social-buttons .social-button.gmail {
-  background: #EA4335;
+  background: #ea4335;
 }
 
 .rounded-social-buttons .social-button.gmail:hover,
 .rounded-social-buttons .social-button.gmail:focus {
-  color: #EA4335;
+  color: #ea4335;
   background: #fefefe;
-  border-color: #EA4335;
+  border-color: #ea4335;
 }
 
 .rounded-social-buttons .social-button.linkedin {
@@ -233,14 +297,14 @@ footer{
 }
 
 .rounded-social-buttons .social-button.discord {
-  background: #5865F2;
+  background: #5865f2;
 }
 
 .rounded-social-buttons .social-button.discord:hover,
 .rounded-social-buttons .social-button.discord:focus {
-  color: #5865F2;
+  color: #5865f2;
   background: #fefefe;
-  border-color: #5865F2;
+  border-color: #5865f2;
 }
 
 .rounded-social-buttons .social-button.instagram {
@@ -252,4 +316,9 @@ footer{
   color: #d62976;
   background: #fefefe;
   border-color: #d62976;
+}
+
+p.copyright {
+  margin-top: 50px;
+  font-size: 22px;
 }

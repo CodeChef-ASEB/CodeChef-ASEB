@@ -73,7 +73,6 @@ p {
   animation-fill-mode: both;
 }
 
-
 @keyframes scatter-zoom-shrink {
   0% {
     transform: scale(0.2) rotate(-45deg) translate(-100px, 100px);

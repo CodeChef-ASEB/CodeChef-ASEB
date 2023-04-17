@@ -1,1 +1,213 @@
-/* Css to be written */
+* {
+  font-family: "Baloo Bhai 2";
+}
+
+/* Navigation Bar */
+
+.nav {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  top: 0;
+}
+
+.nav > .nav-header {
+  display: inline;
+  margin: 0 20px;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  color: brown;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Footer */
+
+footer {
+  padding-top: 50px;
+  box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+  resize: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.svg-inline--fa {
+  vertical-align: -0.2em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border: 5px solid transparent;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 0.15rem;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-envelope,
+.fa-linkedin,
+.fa-discord,
+.fa-instagram {
+  font-size: 50px;
+}
+
+.rounded-social-buttons .social-button.gmail {
+  background: #ea4335;
+}
+
+.rounded-social-buttons .social-button.gmail:hover,
+.rounded-social-buttons .social-button.gmail:focus {
+  color: #ea4335;
+  background: #fefefe;
+  border-color: #ea4335;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.discord {
+  background: #5865f2;
+}
+
+.rounded-social-buttons .social-button.discord:hover,
+.rounded-social-buttons .social-button.discord:focus {
+  color: #5865f2;
+  background: #fefefe;
+  border-color: #5865f2;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #d62976;
+}
+
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+  color: #d62976;
+  background: #fefefe;
+  border-color: #d62976;
+}
+
+p.copyright {
+  margin-top: 50px;
+  font-size: 22px;
+}

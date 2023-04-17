@@ -12,6 +12,7 @@
   box-shadow: 0px 5px 10px 0px #aaa;
   position: fixed;
   top:0;
+  z-index:100;
 }
 
 .nav > .nav-header {
@@ -100,118 +101,226 @@
   }
 }
 
-
-.letter-container {
-  font-family: "Baloo Bhai 2";
-  margin-left: 200px;
-  margin-right: 6.25em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80vh;
-}
-
-.letter {
-  font-size: 7rem;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.letter:not(:hover) {
-  transform: scale(1);
-}
-
-.letter:hover {
-  transform: scale(1.3);
-  z-index: 1;
-}
-
-.popup {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+#fade-wrapper {
   opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  width: 200px;
-  height: 270px;
+  transition: opacity 5s ease-out;
+}
+/* #heading {
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #5a4536, #5a4536);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+  margin-top: 70px;
+} */
+
+svg {
+  position: relative; 
+  width: 100%; height: 100%;
+  background-color: white;
+  color: #5a4536;
 }
 
-.letter:hover .popup {
-  opacity: 1;
-  pointer-events: auto;
+svg text {
+  text-transform: uppercase;
+  animation: stroke 5s 1 alternate;
+  stroke-width: 2;
+  color: #5a4536;
+  font-size: 140px;
 }
 
-.popup h2 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+@keyframes stroke {
+  0%   {
+    fill: white; stroke: #5a4536;
+    stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+  }
+  70%  {fill: white ; stroke: #5a4536; }
+  80%  {fill: white; stroke: #5a4536; stroke-width: 3; }
+  100% {
+    fill: #5a4536; stroke: #5a4536;
+    stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+  }
 }
 
-.popup p {
-  font-size: 1rem;
-  margin-bottom: 10px;
+/* @keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+} */
+
+div.intro{
+	display: grid;
+	margin: 70px 100px;
+	grid-template-columns: 40fr 60fr;
 }
 
-.popup h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+div.contentf p{
+	color: #0C4271;
+	font-size: 20px;
+	font-weight: 700;
 }
 
-.popup ul {
-  list-style: none;
+div.contentf span{
+	color: rgb(160, 160, 160);
+	font-size: 25px;
+	font-weight: 550;
+	display: block;
+	margin-top: 10px;
+}
+
+div.intro img {
+    margin-top: 70px;
+	height: 300px;
+    width: 300px;
+}
+
+*, *:before, *:after{
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-.popup li {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
+.main{
+  height: 500px;
 }
 
-#ai:hover ~ .letter:not(#ai) {
-  transform: translateX(80%);
+body{
+  background: white;
+  font-size: 16px;
 }
 
-#ml:hover ~ .letter:not(#ml) {
-  transform: translateX(60%);
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+  font-size: 40px;
+  margin-top: 30px;
 }
 
-#rethink:hover ~ .letter:not(#rethink) {
-  transform: translateX(20%);
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
 }
 
-#innovation:hover ~ .letter:not(#innovation),
-#rethink:hover ~ .letter:not(#rethink),
-#ml:hover ~ .letter:not(#ml),
-#ai:hover ~ .letter:not(#ai) {
-  transform: translateX(20%);
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
 }
 
-#traditional:hover ~ .letter:not(#traditional) {
-  transform: translateX(-40%);
+@media screen and (min-width: 900px){
+  .container{
+    width: 16.6666666667%;
+  }
 }
 
-#ar:hover ~ .letter:not(#ar),
-#traditional:hover ~ .letter:not(#traditional),
-#innovation:hover ~ .letter:not(#innovation),
-#rethink:hover ~ .letter:not(#rethink),
-#ml:hover ~ .letter:not(#ml),
-#ai:hover ~ .letter:not(#ai) {
-  transform: translateX(80%);
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.heading{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
-  margin-top: 100px;
-  height: 25vh;
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content-title{
+  font-size: 16px;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
 }
 
 textarea {

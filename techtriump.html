@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Page</title>
+    <title>Tech Triumph 1.0</title>
     <link rel="stylesheet" href="assets/css/techtriump.css" />
-    <script src="https://kit.fontawesome.com/549a6f0c8a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/549a6f0c8a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/techtriumph.js"></script>
+    <script>
+      window.onload = function () {
+        var box = document.querySelector('svg');
+      box.addEventListener('animationend', function() {
+        document.getElementById("fade-wrapper").style.opacity = 1;
+      });
+      };
+      
+      
+    </script>
   </head>
   <body>
     <div class="nav">
@@ -24,89 +38,110 @@
 
       <div class="nav-links">
         <a href="/" target="">Home</a>
-        <a href="about.html" target=""
-          >About</a
-        >
-        <a href="events.html" target=""
-          >Events</a
-        >
+        <a href="about.html" target="">About</a>
+        <a href="events.html" target="">Events</a>
       </div>
     </div>
-    <div class="heading">Themes</div>
-    <div class="letter-container">
-      <span class="letter" id="ai">
-        A
-        <div class="popup">
-          <h2>AI</h2>
-          <p>Description of the AI theme</p>
-          <h3>Problem statements</h3>
-          <ul>
-            <li>Problem statement 1</li>
-            <li>Problem statement 2</li>
-          </ul>
-        </div>
-      </span>
-      <span class="letter" id="ml">
-        M
-        <div class="popup">
-          <h2>ML</h2>
-          <p>Description of the ML theme</p>
-          <h3>Problem statements</h3>
-          <ul>
-            <li>Problem statement 1</li>
-            <li>Problem statement 2</li>
-          </ul>
-        </div>
-      </span>
-      <span class="letter" id="rethink">
-        R
-        <div class="popup">
-          <h2>ReThink</h2>
-          <p>Description of the ReThink theme</p>
-          <h3>Problem statements</h3>
-          <ul>
-            <li>Problem statement 1</li>
-            <li>Problem statement 2</li>
-          </ul>
-        </div>
-      </span>
-      <span class="letter" id="innovation">
-        I
-        <div class="popup">
-          <h2>Information Sescurity</h2>
-          <p>Description of the Information Sescurity theme</p>
-          <h3>Problem statements</h3>
-          <ul>
-            <li>Problem statement 1</li>
-            <li>Problem statement 2</li>
-          </ul>
-        </div>
-      </span>
-      <span class="letter" id="traditional">
-        T
-        <div class="popup">
-          <h2>Traditional</h2>
-          <p>Description of the Traditional theme</p>
-          <h3>Problem statements</h3>
-          <ul>
-            <li>Problem statement 1</li>
-            <li>Problem statement 2</li>
-          </ul>
-        </div>
-      </span>
-      <span class="letter" id="ar">
-        A
-        <div class="popup">
-          <h2>AR</h2>
-          <p>Description of the AR theme</p>
-          <h3>Problem statements</h3>
-          <ul>
-            <li>Problem statement 1</li>
-            <li>Problem statement 2</li>
-          </ul>
-        </div>
-      </span>
+    <svg viewBox="0 0 1320 300">
+      <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+        Tech Triumph 1.0
+      </text>
+    </svg>  
+    <div id="fade-wrapper">
+    <div class="intro">
+      <img src="assets/images/intro.png" />
+      <div class="contentf">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nobis
+          deserunt dolore natus, expedita numquam vitae perferendis non optio
+          nemo fugit officiis quam, sunt harum dicta. Reprehenderit placeat
+          autem veniam. Impedit cumque, ullam quas eius mollitia ab eaque,
+          dolore exercitationem voluptate ea porro voluptatibus veniam quis esse
+          libero. Dicta, at ad suscipit voluptatibus vitae voluptatem quia
+          libero aliquam voluptatum rerum. Perferendis laborum provident, id
+          optio earum velit et officiis eligendi. Nulla sequi non natus placeat
+          iste, deserunt praesentium nesciunt obcaecati doloribus quidem animi
+          aperiam ullam hic molestiae debitis, dignissimos harum. Aspernatur non
+          distinctio quaerat veritatis. Error ex similique ipsam ab eum
+          voluptate, cum alias. Unde dolor eaque soluta beatae aut nisi minus
+          vitae illum similique, deleniti aperiam vero mollitia quo. Doloribus
+          vitae facilis quibusdam laudantium, ipsum unde praesentium a dolor
+          possimus nulla ullam cupiditate facere fugit itaque iste? Quo cum
+          animi fugiat. Quia modi, ad beatae tempora voluptates pariatur
+          deserunt?
+        </p>
+      </div>
     </div>
+    <div class="main">
+      <p class="main-title">Themes</p>
+      <div class="container">
+        <div class="content">
+          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="assets/images/A.png" alt="" />
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Artificial Intelligence</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="assets/images/M.png" alt="" />
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Machine Learning</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="assets/images/R.png" alt="" />
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">ReThink</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="assets/images/I.png" alt="" />
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Information Security</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="assets/images/T.png" alt="" />
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Traffic Management or Traditional</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="assets/images/A.png" alt="" />
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Augmented Reality</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="rounded-social-buttons">
         <a
@@ -125,8 +160,9 @@
           class="social-button discord"
           href="https://www.linkedin.com/"
           target="_blank"
-          ><i class="fab fa-discord"></i></a>
-        
+          ><i class="fab fa-discord"></i
+        ></a>
+
         <a
           class="social-button instagram"
           href="https://www.instagram.com/"
@@ -135,8 +171,13 @@
         ></a>
       </div>
       <div>
-        <center><p class="copyright">© Copyright 2022 CodeChef ASEB. All rights reserved.</p></center>
+        <center>
+          <p class="copyright">
+            © Copyright 2022 CodeChef ASEB. All rights reserved.
+          </p>
+        </center>
       </div>
     </footer>
+    </div>
   </body>
 </html>
