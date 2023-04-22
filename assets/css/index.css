@@ -93,3 +93,28 @@ p {
     opacity: 1;
   }
 }
+
+@media screen and (max-device-width: 640px){
+  p{
+    font-size: 30px;
+  }
+
+  @keyframes scatter-zoom-shrink {
+    0% {
+      transform: scale(0.2) rotate(-45deg) translate(-100px, 100px);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(45deg) translate(0, 0);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1.2) rotate(-45deg) translate(0,0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) rotate(0deg) translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
