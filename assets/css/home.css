@@ -374,7 +374,7 @@ p.copyright {
   filter: grayscale(0);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 445px) {
   .rounded-social-buttons .social-button {
     display: inline-block;
     position: relative;
