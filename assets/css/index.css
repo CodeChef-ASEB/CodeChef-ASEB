@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Baloo Bhai 2';
+  font-size: 16px;
 }
 
 .hidden{
@@ -16,10 +17,10 @@ body {
 h1 {
   font-weight: 700;
   text-align: center;
-  font-size: 80px;
+  font-size: 40px;
   text-transform: uppercase;
   background: linear-gradient(90deg,black,black);
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -32,10 +33,10 @@ h1 {
 p {
   font-weight: 700;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   text-transform: uppercase;
   background: linear-gradient(90deg, #5a4536, #5a4536);
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -45,12 +46,12 @@ p {
   position: relative;
 }
 
-@keyframes shine {
-  0% {
-    background-position-x: -500%;
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
   }
-  100% {
-    background-position-x: 500%;
+  p {
+    font-size: 20px;
   }
 }
 
@@ -61,18 +62,32 @@ p {
   margin-top: 10%;
 }
 
-
 .logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  height: 250px;
-  width: 250px;
+  height: auto;
+  max-width: 250px;
   animation-name: scatter-zoom-shrink;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 100%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
 }
 
 @keyframes scatter-zoom-shrink {
