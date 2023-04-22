@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+
 * {
   box-sizing: border-box;
   font-family: 'Baloo Bhai 2',cursive;
@@ -597,31 +598,4 @@ p.copyright{
 }
 .time-counter span:not(:last-child) {
   margin-right: 10px;
-}
-
-/* Mobile styles */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-  .container {
-    padding: 20px;
-  }
-  .header {
-    padding: 10px 0;
-    text-align: center;
-  }
-  .nav {
-    display: none;
-  }
-  .main {
-    padding: 20px 0;
-  }
-  .sidebar {
-    display: none;
-  }
-  .footer {
-    padding: 10px 0;
-    text-align: center;
-  }
 }
