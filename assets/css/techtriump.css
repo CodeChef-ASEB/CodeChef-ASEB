@@ -204,14 +204,14 @@ div.intro img {
   box-sizing: border-box;
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   div.intro {
     display: grid;
     margin: 70px 50px;
     grid-template-columns: 40fr 60fr;
   }
 
-  div.content p {
+  div.contentf p {
     color: #0c4271;
     font-size: 10px;
     font-weight: 700;
@@ -222,6 +222,10 @@ div.intro img {
     margin-top: 170px;
     height: 100px;
     width: 100px;
+  }
+
+  svg{
+    margin-top: 30px;
   }
 }
 
@@ -253,10 +257,6 @@ body {
   .container {
     display: block;
     width: 100%;
-  }
-
-  svg text {
-    margin-top: 70px;
   }
 }
 
