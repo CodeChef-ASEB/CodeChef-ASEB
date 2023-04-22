@@ -419,8 +419,11 @@ textarea {
   }
 
   .bottom-images {
-    flex-wrap: wrap;
-    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 0;
+    max-width: 370px;
   }
 
   .image-container img {
