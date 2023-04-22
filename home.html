@@ -35,7 +35,7 @@
 
       <div class="nav-links">
         <a href="home.html" target="">Home</a>
-        <a href="about.html" target="">About</a>
+        <!-- <a href="about.html" target="">About</a> -->
         <a href="events.html" target="">Events</a>
       </div>
     </div>
@@ -71,26 +71,26 @@
         <a
           class="social-button gmail"
           href="mailto:codechef.amritablr@gmail.com"
-          target="_blank"
+          target=""
           ><i class="far fa-envelope"></i
         ></a>
         <a
           class="social-button linkedin"
-          href="https://www.linkedin.com/"
-          target="_blank"
+          href="https://www.linkedin.com/company/codechef-aseb/"
+          target=""
           ><i class="fab fa-linkedin"></i
         ></a>
         <a
           class="social-button discord"
-          href="https://www.linkedin.com/"
-          target="_blank"
+          href="https://discord.com/invite/Utfm3SmKnV"
+          target=""
           ><i class="fab fa-discord"></i
         ></a>
 
         <a
           class="social-button instagram"
-          href="https://www.instagram.com/"
-          target="_blank"
+          href="https://www.instagram.com/codechef_aseb/"
+          target=""
           ><i class="fab fa-instagram"></i
         ></a>
       </div>
@@ -102,5 +102,21 @@
         </center>
       </div>
     </footer>
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
   </body>
 </html>
