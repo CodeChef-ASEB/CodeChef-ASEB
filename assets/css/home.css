@@ -128,7 +128,8 @@ body.dark .support a {
   transform: scale(1.1);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  
   .nav > .nav-header > .nav-title {
     font-size: 20px;
   }
@@ -244,7 +245,7 @@ textarea {
   white-space: nowrap;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   div.intro {
     display: grid;
     margin: 70px 50px;
@@ -374,7 +375,7 @@ p.copyright {
   filter: grayscale(0);
 }
 
-@media (max-width: 445px) {
+@media (max-width: 640px) {
   .rounded-social-buttons .social-button {
     display: inline-block;
     position: relative;
