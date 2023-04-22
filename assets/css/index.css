@@ -96,7 +96,7 @@ p {
 
 @media screen and (max-device-width: 640px){
   p{
-    font-size: 30px;
+    font-size: 20px;
   }
 
   @keyframes scatter-zoom-shrink {
