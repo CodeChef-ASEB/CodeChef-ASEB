@@ -61,7 +61,7 @@ body {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -184,7 +184,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 105px;
   padding: 8px;
   border-radius: 16px;
   margin: 24px 0;
@@ -197,7 +197,7 @@ body {
 
 #tt-time img {
   height: 20px;
-  padding-right: 15px;
+  padding-right: 14px;
 }
 
 .event .event-right .event-timing img {
