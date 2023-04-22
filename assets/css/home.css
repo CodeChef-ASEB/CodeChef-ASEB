@@ -34,6 +34,15 @@ body {
   padding: 10px 10px 10px 10px;
 }
 
+.nav > .nav-header > .nav-title > a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-header > .nav-title > a:hover {
+  color: brown;
+}
+
 .nav > .nav-btn {
   display: none;
 }
@@ -162,7 +171,7 @@ body.dark .support a {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: white;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;

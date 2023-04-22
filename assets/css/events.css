@@ -35,6 +35,15 @@ body {
   padding: 10px 10px 10px 10px;
 }
 
+.nav > .nav-header > .nav-title > a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-header > .nav-title > a:hover {
+  color: brown;
+}
+
 .nav > .nav-btn {
   display: none;
 }
@@ -61,7 +70,13 @@ body {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .nav {
+    height: 50px;
+  }
+  .nav > .nav-header > .nav-title {
+    font-size: 20px;
+  }
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -85,10 +100,11 @@ body {
     border-top: 2px solid #eee;
   }
   .nav > .nav-links {
+    font-size: 18px;
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: white;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -184,7 +200,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 105px;
+  width: 100px;
   padding: 8px;
   border-radius: 16px;
   margin: 24px 0;
@@ -197,7 +213,7 @@ body {
 
 #tt-time img {
   height: 20px;
-  padding-right: 14px;
+  padding-right: 15px;
 }
 
 .event .event-right .event-timing img {
@@ -337,4 +353,38 @@ textarea {
 p.copyright {
   margin-top: 50px;
   font-size: 22px;
+}
+
+@media (max-width: 640px) {
+  .rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .rounded-social-buttons .fa-envelope,
+  .fa-linkedin,
+  .fa-discord,
+  .fa-instagram {
+    font-size: 25px;
+  }
+
+  p.copyright {
+    margin-top: 50px;
+    font-size: 18px;
+  }
 }
