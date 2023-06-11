@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Prediction</title>
+  <link rel="stylesheet" href="assets/css/grade.css">
+  <script src="assets/js/grade.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body onload="initializeForm()" oncontextmenu="return false">
+  <header>
+    <nav class="main-navigation">
+      <a href="home.html"><img class="logo" src="assets/images/logo_name.png" alt=""></a>
+      <ul>
+        <li><a href="home.html">Home</a> </li>
+        <li><a href="about.html" target="">About</a></li>
+        <li><a href="profile.html"><i class='fas fa-user-graduate' style='font-size:36px;color:white'></a></i></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="marks">
+    <form action="#" onsubmit="return validation()">
+      <h2>Grade Predictor</h2>
+
+      <div class="form-group">
+        <label for="subject-dropdown">Subject</label>
+        <select id="subject-dropdown" onchange="showMarksForm()">
+          <option value="">Select a subject</option>
+          <!-- Add more subjects as needed -->
+          <option value="subject1">Subject 1</option>
+          <option value="subject2">Subject 2</option>
+          <option value="subject3">Subject 3</option>
+          <option value="subject4">Subject 4</option>
+          <option value="subject5">Subject 5</option>
+        </select>
+      </div>
+
+      <div id="subject1-form" style="display: none;">
+        <div class="form-group q1">
+          <label for="fullname">Quiz 1</label>
+          <input type="number" id="q1" placeholder="Enter your Quiz-1 Marks" min="0" max="5">
+          <input type="number" id="hq1" placeholder="Class Highest Marks" min="0" max="5">
+          <input type="number" id="aq1" placeholder="Class Average Marks" min="0" max="5">
+        </div>
+        <div class="form-group q2">
+          <label for="fullname">Quiz 2</label>
+          <input type="number" id="q2" placeholder="Enter your Quiz-2 Marks" min="0" max="5">
+          <input type="number" id="hq2" placeholder="Class Highest Marks" min="0" max="5">
+          <input type="number" id="aq2" placeholder="Class Average Marks" min="0" max="5">
+        </div>
+        <div class="form-group ls1">
+          <label for="fullname">Lab Short Test 1</label>
+          <input type="number" id="lst1" placeholder="Enter your Lab Short Test-1 Marks" min="0" max="10">
+          <input type="number" id="hlst1" placeholder="Class Highest Marks" min="0" max="10">
+          <input type="number" id="alst1" placeholder="Class Average Marks" min="0" max="10">
+        </div>
+        <div class="form-group ls2">
+          <label for="fullname">Lab Short Test 2</label>
+          <input type="number" id="lst2" placeholder="Enter your Lab Short Test-2 Marks" min="0" max="10">
+          <input type="number" id="hlst2" placeholder="Class Highest Marks" min="0" max="10">
+          <input type="number" id="alst2" placeholder="Class Average Marks" min="0" max="10">
+        </div>
+        <div class="form-group ms">
+          <label for="fullname">Mid Sem</label>
+          <input type="number" id="ms" placeholder="Enter your Midsem Marks" min="0" max="20">
+          <input type="number" id="hms" placeholder="Class Highest Marks" min="0" max="20">
+          <input type="number" id="ams" placeholder="Class Average Marks" min="0" max="20">
+        </div>
+        <div class="form-group prj">
+          <label for="fullname">Project</label>
+          <input type="number" id="prj" placeholder="Enter your Project Marks" min="0" max="20">
+          <input type="number" id="hprj" placeholder="Class Highest Marks" min="0" max="20">
+          <input type="number" id="aprj" placeholder="Class Average Marks" min="0" max="20">
+        </div>
+        <div class="form-group es">
+          <label for="fullname">End Sem</label>
+          <input type="number" id="es" placeholder="Enter your End Sem Marks" min="0" max="30">
+          <input type="number" id="hes" placeholder="Class Highest Marks" min="0" max="30">
+          <input type="number" id="aes" placeholder="Class Average Marks" min="0" max="30">
+        </div>
+      </div>
+
+      <div id="subject2-form" style="display: none;">
+        <div class="form-group q1">
+          <label for="fullname">Quiz 1</label>
+          <input type="number" id="q1" placeholder="Enter your Quiz-1 Marks" min="0">
+          <input type="number" id="hq1" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="aq1" placeholder="Class Average Marks" min="0">
+        </div>
+        <div class="form-group q2">
+          <label for="fullname">Quiz 2</label>
+          <input type="number" id="q2" placeholder="Enter your Quiz-2 Marks" min="0">
+          <input type="number" id="hq2" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="aq2" placeholder="Class Average Marks" min="0">
+        </div>
+        <div class="form-group ls1">
+          <label for="fullname">Lab Short Test 3</label>
+          <input type="number" id="lst1" placeholder="Enter your Lab Short Test-1 Marks" min="0">
+          <input type="number" id="hlst1" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="alst1" placeholder="Class Average Marks" min="0">
+        </div>
+        <div class="form-group ls2">
+          <label for="fullname">Lab Short Test 4</label>
+          <input type="number" id="lst2" placeholder="Enter your Lab Short Test-2 Marks" min="0">
+          <input type="number" id="hlst2" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="alst2" placeholder="Class Average Marks" min="0">
+        </div>
+        <div class="form-group ms">
+          <label for="fullname">Mid Sem</label>
+          <input type="number" id="ms" placeholder="Enter your Midsem Marks" min="0">
+          <input type="number" id="hms" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="ams" placeholder="Class Average Marks" min="0">
+        </div>
+        <div class="form-group prj">
+          <label for="fullname">Project</label>
+          <input type="number" id="prj" placeholder="Enter your Project Marks" min="0">
+          <input type="number" id="hprj" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="aprj" placeholder="Class Average Marks" min="0">
+        </div>
+        <div class="form-group es">
+          <label for="fullname">End Sem</label>
+          <input type="number" id="es" placeholder="Enter your End Sem Marks" min="0">
+          <input type="number" id="hes" placeholder="Class Highest Marks" min="0">
+          <input type="number" id="aes" placeholder="Class Average Marks" min="0">
+        </div>
+      </div>
+
+      <div class="form-group submit-btn">
+        <input type="submit" value="Predict Grade">
+        <div class="result" id="totalmarks"></div>
+        <div class="result" id="highmarks"></div>
+        <div class="result" id="avgmarks"></div>
+        <div class="result" id="grading"></div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

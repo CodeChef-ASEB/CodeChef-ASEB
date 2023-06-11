@@ -1,213 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
+
 * {
-  font-family: "Baloo Bhai 2";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Bhai 2", cursive;
 }
 
-/* Navigation Bar */
-
-.nav {
-  height: 60px;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0px 5px 10px 0px #aaa;
-  position: fixed;
-  top: 0;
+header {
+  background-color: #000;
 }
 
-.nav > .nav-header {
-  display: inline;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  text-align: center;
+  color: #0C4271;
+  margin: 50px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+img.logo {
+  height: 65px;
+}
+
+nav.main-navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 20px;
 }
 
-.nav > .nav-header > .nav-title {
+nav.main-navigation ul li{
   display: inline-block;
-  font-size: 25px;
-  font-weight: 500;
-  color: black;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
-  display: none;
-}
-
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 25px;
-  margin-right: 20px;
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.nav > .nav-links > a:hover {
-  color: brown;
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
-
-/* Footer */
-
-footer {
-  padding-top: 50px;
-  box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.4);
-}
-
-textarea {
-  resize: none;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.svg-inline--fa {
-  vertical-align: -0.2em;
-}
-
-.rounded-social-buttons {
-  text-align: center;
-}
-
-.rounded-social-buttons .social-button {
-  display: inline-block;
-  position: relative;
+  padding: 5px;
+  border-radius: 13px;
+  margin: 10px 12px;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
-  border: 5px solid transparent;
-  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+nav.main-navigation ul li:hover{
+  background-color: #36454F;
+  color:white;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+:root {
+  --bg-color: rgb(225, 229,242);
+  --color1: rgb(191, 219, 247);
+  --color2: rgb(31, 122, 140);
+  --color3: rgb(2, 43, 58);
+  --white: rgb(255, 255, 255);
+  --persian-orange: rgb(198, 136, 102);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+}
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.cards {
+  display: flex;
+  padding: 25px 0;
+  list-style: none;
   text-align: center;
-  color: #fefefe;
-  font-size: 42px;
-  font-weight: normal;
-  line-height: 2em;
-  border-radius: 1.6875rem;
-  transition: all 0.5s ease;
-  margin-right: 4rem;
-  margin-left: 4rem;
-  margin-bottom: 0.15rem;
+  scroll-snap-type: x mandatory;
 }
 
-.rounded-social-buttons .social-button:hover,
-.rounded-social-buttons .social-button:focus {
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center;
+  flex: 0 0 100%;
+  padding: 20px;
+  background: #36454F;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 5px 20px 50px #36454F;
+  scroll-snap-align: start;
+  transition: all 0.2s;
 }
 
-.rounded-social-buttons .fa-envelope,
-.fa-linkedin,
-.fa-discord,
-.fa-instagram {
-  font-size: 50px;
+.card:not(last-child) {
+  margin-right: 10px;
 }
 
-.rounded-social-buttons .social-button.gmail {
-  background: #ea4335;
+.card:hover {
+  scale: 1.05;
+}
+.card .card-title {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-.rounded-social-buttons .social-button.gmail:hover,
-.rounded-social-buttons .social-button.gmail:focus {
-  color: #ea4335;
-  background: #fefefe;
-  border-color: #ea4335;
+.card .round {
+  border: 2px solid #36454F;
+  border-radius: 50%;
+  padding: .35rem;
 }
 
-.rounded-social-buttons .social-button.linkedin {
-  background: #007bb5;
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
 }
 
-.rounded-social-buttons .social-button.linkedin:hover,
-.rounded-social-buttons .social-button.linkedin:focus {
-  color: #007bb5;
-  background: #fefefe;
-  border-color: #007bb5;
+.card-content p {
+  font-size: 0.88rem
 }
 
-.rounded-social-buttons .social-button.discord {
-  background: #5865f2;
+button.primary {
+	background-color: var(--color3);
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: var(--white);
+	font-weight: 500;
+	padding: 10px 25px;
+  margin-top: 1rem;
 }
 
-.rounded-social-buttons .social-button.discord:hover,
-.rounded-social-buttons .social-button.discord:focus {
-  color: #5865f2;
-  background: #fefefe;
-  border-color: #5865f2;
+button.primary:hover {
+  background: var(--color2);
 }
 
-.rounded-social-buttons .social-button.instagram {
-  background: #d62976;
+button.primary.ghost {
+	background-color: var(--color3);
+	color: #fff;
 }
 
-.rounded-social-buttons .social-button.instagram:hover,
-.rounded-social-buttons .social-button.instagram:focus {
-  color: #d62976;
-  background: #fefefe;
-  border-color: #d62976;
+button.ghost:hover {
+  background: var(--color2);
+  color: var(--white);
 }
 
-p.copyright {
-  margin-top: 50px;
-  font-size: 22px;
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 5) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(20% - 40px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
 }
