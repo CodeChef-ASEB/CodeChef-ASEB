@@ -1,6 +1,6 @@
 // The End Of Year Date To Countdown To
 
-let countDownDate = new Date("May 16, 2023 23:59:59").getTime();
+let countDownDate = new Date("May 12, 2023 23:59:59").getTime();
 
 let counter = setInterval(() => {
   // Get Date Now
